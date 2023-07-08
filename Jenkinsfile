@@ -7,5 +7,11 @@ pipeline {
       }
     }
 
+    stage('Buzz Build') {
+      steps {
+        archiveArtifacts(artifacts: 'target/*.jar', fingerprint: true)
+      }
+    }
+
   }
 }
